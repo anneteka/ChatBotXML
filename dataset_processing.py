@@ -4,6 +4,21 @@ import pandas as pd
 import mysql.connector
 import openpyxl
 
+user = 'root'
+password = 'root'
+schema = 'chatbot_test'
+
+
+def create_database():
+    db_connection = mysql.connector.connect(user=user, password=password,
+                                            host='127.0.0.1')
+    db_cursor = db_connection.cursor()
+    create_schema_query = f"CREATE SCHEMA {schema}"
+    db_cursor.execute(create_schema_query)
+    db_connection.commit()
+    db_cursor.close()
+    db_connection.close()
+
 
 def setup_database(from_file):
     if from_file.endswith('.csv'):
@@ -13,9 +28,9 @@ def setup_database(from_file):
 
     table_name = from_file.split('\\')[-1].split('.')[0]
 
-    db_connection = mysql.connector.connect(user='root', password='root',
+    db_connection = mysql.connector.connect(user=user, password=password,
                                             host='127.0.0.1',
-                                            database='chatbot')
+                                            database=schema)
     db_cursor = db_connection.cursor()
 
     data.columns = data.columns.str.replace('.', '_')
@@ -41,7 +56,6 @@ def setup_database(from_file):
     db_cursor.close()
     db_connection.close()
 
-
+create_database()
 setup_database("resources\dataset_small.xlsx")
 setup_database("resources\dataset_big.csv")
-
