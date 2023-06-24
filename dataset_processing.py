@@ -42,6 +42,6 @@ def setup_database(from_file):
     db_connection.close()
 
 
-# setup_database("resources\dataset_small.xlsx")
+setup_database("resources\dataset_small.xlsx")
 setup_database("resources\dataset_big.csv")
 
