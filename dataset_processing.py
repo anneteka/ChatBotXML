@@ -6,7 +6,7 @@ import openpyxl
 
 user = 'root'
 password = 'root'
-schema = 'chatbot_test'
+schema = 'chatbot'
 
 
 def create_database():
