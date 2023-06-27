@@ -56,6 +56,7 @@ def setup_database(from_file):
     db_cursor.close()
     db_connection.close()
 
+
 create_database()
 setup_database("resources\dataset_small.xlsx")
 setup_database("resources\dataset_big.csv")
