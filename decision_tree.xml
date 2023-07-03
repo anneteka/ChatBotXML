@@ -1,0 +1,97 @@
+<DecisionTree
+        classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anexiety,bipolar,eating disorder,psychotic deprission,sleeping disorder">
+    <Node feature="introvert" answer="no">
+        <Node feature="hopelessness" answer="no">
+            <Node feature="feeling_negative" answer="no">
+                <Node feature="close_friend" answer="no">
+                    <Node>
+                        <Disorder name="ADHD"/>
+                    </Node>
+                </Node>
+                <Node feature="close_friend" answer="yes">
+                    <Node feature="having_nightmares" answer="no">
+                        <Node feature="breathing_rapidly" answer="no">
+                            <Node feature="popping_up_stressful_memory" answer="no">
+                                <Node>
+                                    <Disorder name="bipolar"/>
+                                </Node>
+                            </Node>
+                            <Node feature="popping_up_stressful_memory" answer="yes">
+                                <Node feature="increased_energy" answer="no">
+                                    <Node>
+                                        <Disorder name="sleeping disorder"/>
+                                    </Node>
+                                </Node>
+                                <Node feature="increased_energy" answer="yes">
+                                    <Node>
+                                        <Disorder name="OCD"/>
+                                    </Node>
+                                </Node>
+                            </Node>
+                        </Node>
+                        <Node feature="breathing_rapidly" answer="yes">
+                            <Node>
+                                <Disorder name="anexiety"/>
+                            </Node>
+                        </Node>
+                    </Node>
+                    <Node feature="having_nightmares" answer="yes">
+                        <Node>
+                            <Disorder name="PTSD"/>
+                        </Node>
+                    </Node>
+                </Node>
+            </Node>
+            <Node feature="feeling_negative" answer="yes">
+                <Node feature="social_media_addiction" answer="no">
+                    <Node>
+                        <Disorder name="MDD"/>
+                    </Node>
+                </Node>
+                <Node feature="social_media_addiction" answer="yes">
+                    <Node>
+                        <Disorder name="eating disorder"/>
+                    </Node>
+                </Node>
+            </Node>
+        </Node>
+        <Node feature="hopelessness" answer="yes">
+            <Node feature="having_trouble_in_sleeping" answer="no">
+                <Node>
+                    <Disorder name="PDD"/>
+                </Node>
+            </Node>
+            <Node feature="having_trouble_in_sleeping" answer="yes">
+                <Node feature="blamming_yourself" answer="no">
+                    <Node>
+                        <Disorder name="MDD"/>
+                    </Node>
+                </Node>
+                <Node feature="blamming_yourself" answer="yes">
+                    <Node>
+                        <Disorder name="MDD"/>
+                    </Node>
+                </Node>
+            </Node>
+        </Node>
+    </Node>
+    <Node feature="introvert" answer="yes">
+        <Node feature="avoids_people_or_activities" answer="no">
+            <Node>
+                <Disorder name="Loneliness"/>
+            </Node>
+        </Node>
+        <Node feature="avoids_people_or_activities" answer="yes">
+            <Node feature="feeling_negative" answer="no">
+                <Node>
+                    <Disorder name="ASD"/>
+                </Node>
+            </Node>
+            <Node feature="feeling_negative" answer="yes">
+                <Node>
+                    <Disorder name="psychotic deprission"/>
+                </Node>
+            </Node>
+        </Node>
+    </Node>
+</DecisionTree>
