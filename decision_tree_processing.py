@@ -31,12 +31,13 @@ def process_line(lines, parent_element, current_level, last_nodes):
 
         if line_level >= current_level:
             lines.pop(0)
-            node = ET.SubElement(parent_element, 'Node')
+            node = ET.SubElement(parent_element, 'Symptom')
 
             if 'class:' in line:
                 class_name = get_node_class_name(line)
-                class_element = ET.SubElement(node, 'Disorder')
-                class_element.set('name', class_name)
+                node.tag = "Disorder"
+                # class_element = ET.SubElement(node, 'Disorder')
+                node.set('name', class_name)
 
             else:
                 node.set('feature', get_node_feature(line))
