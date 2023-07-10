@@ -1,0 +1,38 @@
+<DecisionTree classNames="MDD,PDD,psychotic deprission">
+	<Symptom feature="having_trouble_in_sleeping" answer="no">
+		<Disorder name="PDD" />
+	</Symptom>
+	<Symptom feature="having_trouble_in_sleeping" answer="yes">
+		<Symptom feature="introvert" answer="no">
+			<Symptom feature="blamming_yourself" answer="no">
+				<Disorder name="MDD" />
+			</Symptom>
+			<Symptom feature="blamming_yourself" answer="yes">
+				<Symptom feature="age" answer="no">
+					<Symptom feature="age" answer="no">
+						<Disorder name="MDD" />
+					</Symptom>
+					<Symptom feature="age" answer="yes">
+						<Disorder name="MDD" />
+					</Symptom>
+				</Symptom>
+				<Symptom feature="age" answer="yes">
+					<Symptom feature="age" answer="no">
+						<Symptom feature="age" answer="no">
+							<Disorder name="PDD" />
+						</Symptom>
+						<Symptom feature="age" answer="yes">
+							<Disorder name="PDD" />
+						</Symptom>
+					</Symptom>
+					<Symptom feature="age" answer="yes">
+						<Disorder name="MDD" />
+					</Symptom>
+				</Symptom>
+			</Symptom>
+		</Symptom>
+		<Symptom feature="introvert" answer="yes">
+			<Disorder name="psychotic deprission" />
+		</Symptom>
+	</Symptom>
+</DecisionTree>
