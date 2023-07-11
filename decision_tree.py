@@ -19,8 +19,8 @@ def get_decision_tree(dataset_name):
         database=schema
     )
 
-    # query = "SELECT * FROM " + dataset_name + ";"
-    query = "select * from chatbot_mental_issues where feeling_nervous = 1  and trouble_concentrating = 1 and anger = 1 and age > 21 and age < 31 order by Disorder;"
+    query = "SELECT * FROM " + dataset_name + ";"
+    # query = "select * from chatbot_mental_issues where feeling_nervous = 1  and trouble_concentrating = 1 and anger = 1 and age > 21 and age < 31 order by Disorder;"
     dataset = pd.read_sql(query, conn)
 
     conn.close()
@@ -55,4 +55,4 @@ decision_tree = get_decision_tree("dataset_small")
 
 tree_xml = decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2], class_names=decision_tree[0].classes_)
 
-tree_xml.write('decision_tree2.xml')
+tree_xml.write('decision_tree.xml')

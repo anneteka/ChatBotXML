@@ -1,97 +1,69 @@
-<DecisionTree
-        classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anexiety,bipolar,eating disorder,psychotic deprission,sleeping disorder">
-    <Node feature="introvert" answer="no">
-        <Node feature="hopelessness" answer="no">
-            <Node feature="feeling_negative" answer="no">
-                <Node feature="close_friend" answer="no">
-                    <Node>
-                        <Disorder name="ADHD"/>
-                    </Node>
-                </Node>
-                <Node feature="close_friend" answer="yes">
-                    <Node feature="having_nightmares" answer="no">
-                        <Node feature="breathing_rapidly" answer="no">
-                            <Node feature="popping_up_stressful_memory" answer="no">
-                                <Node>
-                                    <Disorder name="bipolar"/>
-                                </Node>
-                            </Node>
-                            <Node feature="popping_up_stressful_memory" answer="yes">
-                                <Node feature="increased_energy" answer="no">
-                                    <Node>
-                                        <Disorder name="sleeping disorder"/>
-                                    </Node>
-                                </Node>
-                                <Node feature="increased_energy" answer="yes">
-                                    <Node>
-                                        <Disorder name="OCD"/>
-                                    </Node>
-                                </Node>
-                            </Node>
-                        </Node>
-                        <Node feature="breathing_rapidly" answer="yes">
-                            <Node>
-                                <Disorder name="anexiety"/>
-                            </Node>
-                        </Node>
-                    </Node>
-                    <Node feature="having_nightmares" answer="yes">
-                        <Node>
-                            <Disorder name="PTSD"/>
-                        </Node>
-                    </Node>
-                </Node>
-            </Node>
-            <Node feature="feeling_negative" answer="yes">
-                <Node feature="social_media_addiction" answer="no">
-                    <Node>
-                        <Disorder name="MDD"/>
-                    </Node>
-                </Node>
-                <Node feature="social_media_addiction" answer="yes">
-                    <Node>
-                        <Disorder name="eating disorder"/>
-                    </Node>
-                </Node>
-            </Node>
-        </Node>
-        <Node feature="hopelessness" answer="yes">
-            <Node feature="having_trouble_in_sleeping" answer="no">
-                <Node>
-                    <Disorder name="PDD"/>
-                </Node>
-            </Node>
-            <Node feature="having_trouble_in_sleeping" answer="yes">
-                <Node feature="blamming_yourself" answer="no">
-                    <Node>
-                        <Disorder name="MDD"/>
-                    </Node>
-                </Node>
-                <Node feature="blamming_yourself" answer="yes">
-                    <Node>
-                        <Disorder name="MDD"/>
-                    </Node>
-                </Node>
-            </Node>
-        </Node>
-    </Node>
-    <Node feature="introvert" answer="yes">
-        <Node feature="avoids_people_or_activities" answer="no">
-            <Node>
-                <Disorder name="Loneliness"/>
-            </Node>
-        </Node>
-        <Node feature="avoids_people_or_activities" answer="yes">
-            <Node feature="feeling_negative" answer="no">
-                <Node>
-                    <Disorder name="ASD"/>
-                </Node>
-            </Node>
-            <Node feature="feeling_negative" answer="yes">
-                <Node>
-                    <Disorder name="psychotic deprission"/>
-                </Node>
-            </Node>
-        </Node>
-    </Node>
+<DecisionTree id="0"
+              classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anexiety,bipolar,eating disorder,psychotic deprission,sleeping disorder">
+    <Symptom id="1" feature="introvert" answer="no">
+        <Symptom id="2" feature="hopelessness" answer="no">
+            <Symptom id="3" feature="feeling_negative" answer="no">
+                <Symptom id="4" feature="close_friend" answer="no">
+                    <Disorder id="5" name="ADHD"/>
+                </Symptom>
+                <Symptom id="6" feature="close_friend" answer="yes">
+                    <Symptom id="7" feature="having_nightmares" answer="no">
+                        <Symptom id="8" feature="breathing_rapidly" answer="no">
+                            <Symptom id="9" feature="feeling_tired" answer="no">
+                                <Disorder id="10" name="bipolar"/>
+                            </Symptom>
+                            <Symptom id="11" feature="feeling_tired" answer="yes">
+                                <Symptom id="12" feature="increased_energy" answer="no">
+                                    <Disorder id="13" name="sleeping disorder"/>
+                                </Symptom>
+                                <Symptom id="14" feature="increased_energy" answer="yes">
+                                    <Disorder id="15" name="OCD"/>
+                                </Symptom>
+                            </Symptom>
+                        </Symptom>
+                        <Symptom id="16" feature="breathing_rapidly" answer="yes">
+                            <Disorder id="17" name="anexiety"/>
+                        </Symptom>
+                    </Symptom>
+                    <Symptom id="18" feature="having_nightmares" answer="yes">
+                        <Disorder id="19" name="PTSD"/>
+                    </Symptom>
+                </Symptom>
+            </Symptom>
+            <Symptom id="20" feature="feeling_negative" answer="yes">
+                <Symptom id="21" feature="weight_gain" answer="no">
+                    <Disorder id="22" name="MDD"/>
+                </Symptom>
+                <Symptom id="23" feature="weight_gain" answer="yes">
+                    <Disorder id="24" name="eating disorder"/>
+                </Symptom>
+            </Symptom>
+        </Symptom>
+        <Symptom id="25" feature="hopelessness" answer="yes">
+            <Symptom id="26" feature="having_trouble_in_sleeping" answer="no">
+                <Disorder id="27" name="PDD"/>
+            </Symptom>
+            <Symptom id="28" feature="having_trouble_in_sleeping" answer="yes">
+                <Symptom id="29" feature="blamming_yourself" answer="no">
+                    <Disorder id="30" name="MDD"/>
+                </Symptom>
+                <Symptom id="31" feature="blamming_yourself" answer="yes">
+                    <Disorder id="32" name="MDD"/>
+                </Symptom>
+            </Symptom>
+        </Symptom>
+    </Symptom>
+    <Symptom id="33" feature="introvert" answer="yes">
+        <Symptom id="34" feature="avoids_people_or_activities" answer="no">
+            <Disorder id="35" name="Loneliness"/>
+        </Symptom>
+        <Symptom id="36" feature="avoids_people_or_activities" answer="yes">
+            <Symptom id="37" feature="feeling_negative" answer="no">
+                <Disorder id="38" name="ASD"/>
+            </Symptom>
+            <Symptom id="39" feature="feeling_negative" answer="yes">
+                <Disorder id="40" name="psychotic deprission"/>
+            </Symptom>
+        </Symptom>
+    </Symptom>
 </DecisionTree>

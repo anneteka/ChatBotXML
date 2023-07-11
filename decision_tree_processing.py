@@ -14,16 +14,18 @@ def decision_tree_to_xml(decision_tree, feature_names, class_names):
 
     current_level = -1
     last_nodes = {0: root}
-    process_line(lines, root, current_level, last_nodes)
+    id_counter = 1
+    process_line(lines, root, current_level, last_nodes, id_counter)
 
     tree = ET.ElementTree(root)
+    root.set('id', '0')
 
     root.set('classNames', ','.join(class_names))
 
     return tree
 
 
-def process_line(lines, parent_element, current_level, last_nodes):
+def process_line(lines, parent_element, current_level, last_nodes, id_counter):
     while lines:
         line = lines[0]
         line_level = get_indentation_level(line)
@@ -32,6 +34,8 @@ def process_line(lines, parent_element, current_level, last_nodes):
         if line_level >= current_level:
             lines.pop(0)
             node = ET.SubElement(parent_element, 'Symptom')
+            node.set('id', str(id_counter))
+            id_counter += 1
 
             if 'class:' in line:
                 class_name = get_node_class_name(line)
@@ -46,12 +50,12 @@ def process_line(lines, parent_element, current_level, last_nodes):
                 last_nodes[line_level] = node
 
                 if lines and get_indentation_level(lines[0]) > line_level:
-                    lines = process_line(lines, node, line_level + 1, last_nodes)
+                    lines = process_line(lines, node, line_level + 1, last_nodes, id_counter)
 
         elif line_level < current_level:
-            parent_node = last_nodes[line_level-1]
+            parent_node = last_nodes[line_level - 1]
 
-            lines = process_line(lines, parent_node, line_level-1, last_nodes)
+            lines = process_line(lines, parent_node, line_level - 1, last_nodes, id_counter)
 
     return lines
 
