@@ -1,0 +1,24 @@
+<Answers>
+    <Answer answer="yes">
+        <KeyWords text="yep"/>
+        <KeyWords text="yeah"/>
+        <KeyWords text="definitely"/>
+        <KeyWords text="absolutely"/>
+        <KeyWords text="a lot"/>
+        <KeyWords text="sometimes"/>
+        <KeyWords text="often"/>
+        <KeyWords text="almost every day"/>
+        <KeyWords text="pretty much"/>
+        <KeyWords text="i think so"/>
+
+    </Answer>
+    <Answer answer="no">
+        <KeyWords text="nope"/>
+        <KeyWords text="never"/>
+        <KeyWords text="almost never"/>
+        <KeyWords text="rarely"/>
+        <KeyWords text="i don't think so"/>
+        <KeyWords text="i am not sure"/>
+        <KeyWords text="not sure"/>
+    </Answer>
+</Answers>

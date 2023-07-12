@@ -1,0 +1,192 @@
+<Sypmtoms>
+    <Symptom name="feeling_nervous">
+        <Question text="Have you been feeling nervous?"/>
+        <KeyWords text="nervous"/>
+        <KeyWords text="nervousness"/>
+    </Symptom>
+    <Symptom name="breathing_rapidly">
+        <Question text="Do you experience breathing rapidly?"/>
+        <KeyWords text="breathing rapidly"/>
+        <KeyWords text="rapid breathing"/>
+        <KeyWords text="breathing quickly"/>
+        <KeyWords text="quick breathing"/>
+    </Symptom>
+    <Symptom name="sweating">
+        <Question text="Have you been sweating more than usual or average?"/>
+        <KeyWords text="sweaty"/>
+        <KeyWords text="sweating"/>
+    </Symptom>
+    <Symptom name="having_trouble_in_sleeping">
+        <Question text="Do you have trouble sleeping?"/>
+        <KeyWords text="having trouble in sleeping"/>
+        <KeyWords text="sleeping problems"/>
+        <KeyWords text="trouble sleeping"/>
+        <KeyWords text="falling asleep"/>
+    </Symptom>
+    <Symptom name="having_trouble_with_work">
+        <Question text="Have you been having trouble with work or school?"/>
+        <KeyWords text="trouble with work"/>
+        <KeyWords text="trouble with school"/>
+        <KeyWords text="trouble at work"/>
+        <KeyWords text="trouble at school"/>
+        <KeyWords text="trouble working"/>
+        <KeyWords text="trouble studying"/>
+        <KeyWords text="trouble at uni"/>
+        <KeyWords text="trouble at university"/>
+        <KeyWords text="trouble with uni"/>
+        <KeyWords text="trouble with university"/>
+    </Symptom>
+    <Symptom name="hopelessness">
+        <Question text="Do you feel hopeless?"/>
+        <KeyWords text="hopeless"/>
+        <KeyWords text="hopelessness"/>
+        <KeyWords text="no hope"/>
+    </Symptom>
+    <Symptom name="anger">
+        <Question text="Have you been feeling angry often?"/>
+        <KeyWords text="anger"/>
+        <KeyWords text="angered"/>
+    </Symptom>
+    <Symptom name="over_react">
+        <Question text="Have you been overreacting often?"/>
+        <KeyWords text="over react"/>
+        <KeyWords text="over reacting"/>
+        <KeyWords text="overreaction"/>
+        <KeyWords text="overreacting"/>
+        <KeyWords text="over reaction"/>
+        <KeyWords text="overreact"/>
+    </Symptom>
+    <Symptom name="change_in_eating">
+        <Question text="Have you noticed changes in your eating habits?"/>
+        <KeyWords text="change in eating"/>
+        <KeyWords text="eating disorder"/>
+        <KeyWords text="ed"/>
+    </Symptom>
+    <Symptom name="suicidal_thought">
+        <Question text="Have you been having suicidal thoughts?"/>
+        <KeyWords text="suicidal"/>
+        <KeyWords text="suicide"/>
+        <KeyWords text="self harming"/>
+        <KeyWords text="selfharm"/>
+        <KeyWords text="self harm"/>
+        <KeyWords text="selfharming"/>
+        <KeyWords text="cut"/>
+        <KeyWords text="cutting"/>
+    </Symptom>
+    <Symptom name="feeling_tired">
+        <Question text="Have you been feeling tired more than usual or average?"/>
+        <KeyWords text="tired"/>
+        <KeyWords text="tiredness"/>
+        <KeyWords text="no strength"/>
+        <KeyWords text="no energy"/>
+    </Symptom>
+    <Symptom name="close_friend">
+        <Question text="Do you have at least one close friend?"/>
+        <KeyWords text="close friend"/>
+    </Symptom>
+    <Symptom name="social_media_addiction">
+        <Question text="Do you think you are addicted to social media?"/>
+        <KeyWords text="social media"/>
+        <KeyWords text="social media addiction"/>
+        <KeyWords text="addicted to social media"/>
+    </Symptom>
+    <Symptom name="weight_gain">
+        <Question text="Have you experienced a weight gain lately?"/>
+        <KeyWords text="weight gain"/>
+        <KeyWords text="fat"/>
+    </Symptom>
+    <Symptom name="introvert">
+        <Question text="Have you been feeling introverted?"/>
+        <KeyWords text="no friends"/>
+        <KeyWords text="introvert"/>
+        <KeyWords text="introverted"/>
+    </Symptom>
+    <Symptom name="popping_up_stressful_memory">
+        <Question text="Do stressful memory pop up frequently in your mind?"/>
+        <KeyWords text="stressful memory"/>
+        <KeyWords text="stressful memories"/>
+        <KeyWords text="flashback"/>
+        <KeyWords text="flashbacks"/>
+        <KeyWords text="intrusive thoughts"/>
+        <KeyWords text="intrusive thought"/>
+    </Symptom>
+    <Symptom name="having_nightmares">
+        <Question text="Do you have nightmares?"/>
+        <KeyWords text="nightmare"/>
+        <KeyWords text="nightmares"/>
+        <KeyWords text="bad dreams"/>
+        <KeyWords text="bad dream"/>
+    </Symptom>
+    <Symptom name="avoids_people_or_activities">
+        <Question text="Do you avoid people or activities?"/>
+        <KeyWords text="isolating"/>
+        <KeyWords text="anti-social"/>
+        <KeyWords text="not socialising"/>
+        <KeyWords text="not talking"/>
+        <KeyWords text="avoid people"/>
+        <KeyWords text="avoiding people"/>
+    </Symptom>
+    <Symptom name="feeling_negative">
+        <Question text="Have you been feeling negative lately?"/>
+        <KeyWords text="feeling negative"/>
+        <KeyWords text="sad"/>
+        <KeyWords text="crying"/>
+        <KeyWords text="cry"/>
+    </Symptom>
+    <Symptom name="trouble_concentrating">
+        <Question text="Have you been having trouble concentrating?"/>
+        <KeyWords text="concentrating"/>
+        <KeyWords text="concentration"/>
+        <KeyWords text="concentrated"/>
+    </Symptom>
+    <Symptom name="blamming_yourself">
+        <Question text="Have you been blaming yourself lately?"/>
+        <KeyWords text="blaming myself"/>
+    </Symptom>
+    <Symptom name="hallucinations">
+        <Question text="Have you been experiencing hallucinations?"/>
+        <KeyWords text="hallucination"/>
+        <KeyWords text="hallucinations"/>
+        <KeyWords text="hallucinate"/>
+        <KeyWords text="hallucinating"/>
+        <KeyWords text="seeing things"/>
+        <KeyWords text="seeing stuff"/>
+        <KeyWords text="hearing things"/>
+        <KeyWords text="hearing stuff"/>
+    </Symptom>
+    <Symptom name="repetitive_behaviour">
+        <Question text="Have you noticed any repetitive behaviours?"/>
+        <KeyWords text="ocd"/>
+        <KeyWords text="obsessive"/>
+        <KeyWords text="repetitive behaviour"/>
+        <KeyWords text="ritual"/>
+        <KeyWords text="rituals"/>
+    </Symptom>
+    <Symptom name="seasonally">
+        <Question text="Do your symptoms present themselves seasonally?"/>
+        <KeyWords text="seasonally"/>
+        <KeyWords text="seasonal"/>
+        <KeyWords text="winter"/>
+        <KeyWords text="spring"/>
+        <KeyWords text="summer"/>
+        <KeyWords text="summertime"/>
+        <KeyWords text="autumn"/>
+    </Symptom>
+    <Symptom name="increased_energy">
+        <Question text="Have you been experience increased energy?"/>
+        <KeyWords text="increased energy"/>
+        <KeyWords text="lots of energy"/>
+        <KeyWords text="a lot of energy"/>
+        <KeyWords text="more energy"/>
+        <KeyWords text="energetic"/>
+        <KeyWords text="manic"/>
+    </Symptom>
+    <Symptom name="panic">
+        <Question text="Do you experience panic or panic attacks?"/>
+        <KeyWords text="panic"/>
+        <KeyWords text="panicking"/>
+        <KeyWords text="panicked"/>
+        <KeyWords text="anxiety"/>
+        <KeyWords text="anxious"/>
+    </Symptom>
+</Sypmtoms>
