@@ -1,5 +1,5 @@
 <DecisionTree id="0"
-              classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anexiety,bipolar,eating disorder,psychotic deprission,sleeping disorder">
+              classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anxiety,bipolar,eating disorder,psychotic depression,sleeping disorder">
     <Symptom id="1" feature="introvert" answer="no">
         <Symptom id="2" feature="hopelessness" answer="no">
             <Symptom id="3" feature="feeling_negative" answer="no">

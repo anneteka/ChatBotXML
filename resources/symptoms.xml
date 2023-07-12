@@ -3,6 +3,7 @@
         <Question text="Have you been feeling nervous?"/>
         <KeyWords text="nervous"/>
         <KeyWords text="nervousness"/>
+        <KeyWords text="feeling nervous"/>
     </Symptom>
     <Symptom name="breathing_rapidly">
         <Question text="Do you experience breathing rapidly?"/>

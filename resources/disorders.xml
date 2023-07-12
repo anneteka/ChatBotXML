@@ -1,0 +1,51 @@
+<Disorders>
+    <Disorder name="ADHD">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="ASD">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="loneliness">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="MDD">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="OCD">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="PDD">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="PTSD">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="anxiety">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="bipolar disorder">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="eating disorder">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="psychotic depression">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+    <Disorder name="sleeping disorder">
+        <Message text=""/>
+        <Link url="" description=""/>
+    </Disorder>
+
+</Disorders>
