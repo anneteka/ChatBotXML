@@ -74,8 +74,12 @@ def findDisorder(root):
         if(child.tag == "Disorder"):
             print("Bot: => Based on your answers and the dataset that we have, there is a probability that you have: " + child.get("name"))
             break
-        print("Bot: Do you have this symptom: " + child.get("feature") + "?")
+        print("Bot: " + questions[str(child.get("feature"))])
         answer = input("You: ")
+        # check if the answer is yes/no
+        while(answer != "yes" and answer != "no"):
+            print("Bot: Please type a valid answer: yes or no!")
+            answer = input("You: ")
         if(answer == child.get("answer")):
             # firstly check if this node had the 
             # start checking inside the nested node
@@ -104,6 +108,8 @@ def get_response(user_input):
 chat = {}
 symptomsArray = set()
 responses = util.initializeResponses()
+# initialize questions for each symptom
+questions = util.initializeSymptomsQuestions()
 age = 0
 # print the entry of the chatbot
 print("########################################################################")
