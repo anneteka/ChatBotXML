@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 import xml.etree.ElementTree as ET
 from sklearn.tree import *
 import pandas as pd
+import warnings
 
 
 SYMPTOMS = ['feeling_nervous', 
@@ -41,6 +42,8 @@ def createConnection(host = "localhost", user = "root",passwd = "root", database
 myconn = createConnection()
 
 def createDecisionTree(symptoms_array, age=25):
+    warnings.filterwarnings('ignore')
+
     query = "select * from chatbot_mental_issues where "
     symptoms_list = list(symptoms_array)
     for i in range(len(symptoms_list)-1):

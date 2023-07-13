@@ -82,6 +82,7 @@ def findDisorder(root):
             return findDisorder(child)          
         else:
             return findDisorder(root[1])
+        
 # Used to get the response
 def get_response(user_input):
     if(age != 0):
@@ -113,7 +114,7 @@ while True:
     
     if(ageAsking):
         if(you.isdigit()):
-            if(int(you) >=4  and int(you)):
+            if(int(you) >=4  and int(you)<= 46):
                 age = you
                 ageAsking = False
             else:
