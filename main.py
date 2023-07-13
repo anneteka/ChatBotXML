@@ -72,7 +72,7 @@ def findDisorder(root):
     for child in root:
         # this means the disorder is already located
         if(child.tag == "Disorder"):
-            print("Bot: => Your disorder is: " + child.get("name"))
+            print("Bot: => Based on your answers and the dataset that we have, there is a probability that you have: " + child.get("name"))
             break
         print("Bot: Do you have this symptom: " + child.get("feature") + "?")
         answer = input("You: ")
@@ -105,6 +105,17 @@ chat = {}
 symptomsArray = set()
 responses = util.initializeResponses()
 age = 0
+# print the entry of the chatbot
+print("########################################################################")
+print("#                                                                      #")
+print("#    Hello! This a chatbot that is supposed to help you.               #")
+print("#    Bot wishes you well, you can have a fun chat with it,             #") 
+print("#    but the real purpose is to help you in case do not feel           #")  
+print("#    your best and bot can help you find more about what is going on.  #") 
+print("#    Hope you will enjoy chatting. Tell Bot more about you!            #")
+print("#                                                                      #")
+print("########################################################################")
+print()
 # Testing the response system
 while True:
     you = input('You: ')
