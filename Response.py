@@ -4,3 +4,8 @@ class Response:
         self.single_response = single_response
         self.required_words = required_words
         self.db = db
+
+class DisorderAnswer:
+    def __init__(self, message, url):
+        self.message = message
+        self.url = url
