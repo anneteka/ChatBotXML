@@ -20,6 +20,11 @@ def process_symptoms(text):
             res.append(s[0])
     return res
 
+def findTextForSymptoms():
+    tree = ET.parse('resources/symptoms.xml')
+    res = tree.xpath(f"//Symptom/KeyWords/@text")
+    return res
+
 
 def get_question(symptom):
     tree = ET.parse('resources/symptoms.xml')
@@ -27,6 +32,7 @@ def get_question(symptom):
     return res
 
 
-print(process_answer("a lot"))
-print(process_symptoms("tired and sad,"))
-print(get_question("hallucinations"))
+# print(process_answer("a lot"))
+# print(process_symptoms("tired and sad,"))
+# print(get_question("hallucinations"))
+# print(findTextForSymptoms(""))

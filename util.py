@@ -1,6 +1,7 @@
 from Response import Response
 import xml.etree.ElementTree as ET
 from Response import DisorderAnswer
+from process_message import findTextForSymptoms
 
 
 # this function creates a dictionary where the key is the bot response and the value is the Response class
@@ -13,6 +14,7 @@ def initializeResponses():
     responses['You\'re welcome!']=Response(['thank', 'thanks'], single_response=True)
     responses['Thank you!']=Response(['i', 'love', 'code', 'palace'], required_words=['code', 'palace'])
     responses['What symptoms do you have?']=Response(['feeling', 'well', 'not', 'good', 'been'], required_words=['not', 'feeling'])
+#     responses['And what is your age?']=Response( findTextForSymptoms(), db = True)
     responses['And what is your age?']=Response( ['feeling_nervous', 'panic', 'breathing_rapidly', 'sweating', 'trouble_in_concentration', 'having_trouble_in_sleeping', 'having_trouble_with_work', 'hopelessness', 'anger', 'over_react', 'change_in_eating', 'suicidal_thought', 
             'feeling_tired', 'close_friend', 'social_media_addiction', 'weight_gain', 'introvert', 'popping_up_stressful_memory',
             'having_nightmares', 'avoids_people_or_activities', 'feeling_negative', 'trouble_concentrating', 'blamming_yourself',
@@ -23,7 +25,7 @@ def initializeResponses():
 def initializeSymptomsQuestions():
     questions = {
         "having_trouble_in_sleeping" : "Do you have trouble sleeping?", 
-        "hopelessness" : "Do you feel hopelessness?",
+        "hopelessness" : "Do you feel hopeless?",
         "social_media_addiction" : "Do you have a social media addiction?", 
         "avoids_people_or_activities" : "Do you avoid people or activities?", 
         "close_friend" : "Do you have close friends?", 

@@ -55,7 +55,7 @@ def createDecisionTree(symptoms_array, age=25):
     myconn.close()
 
     # Separate features (symptoms and age) and the target variable (disease)
-    X = rows.iloc[:, 1:-1]  # Features (symptoms and age)
+    X = rows.iloc[:, 2:-1]  # Features (symptoms and age)
     y = rows['Disorder']  # Target variable
 
     # Split the dataset into training and testing sets

@@ -5,6 +5,7 @@ import db as db_fxn
 import util
 from decision_tree_processing import *
 from process_message import process_answer
+from process_message import process_symptoms
 
 ageAsking = False
 
@@ -29,7 +30,7 @@ def message_probability(user_message, recognised_words, single_response=False, r
 
     # Must either have the required words, or be a single response
     if has_required_words or single_response:
-        return int(percentage * 100)
+        return int(percentage * 10000)
     else:
         return 0
 
@@ -59,6 +60,8 @@ def check_all_messages(message):
     # here we check if we need extract the symptoms for later use in the query
     if(responses[best_match].db and age == 0):
         extractSymptomsFromMessage(message)
+        # global symptomsArray
+        # symptomsArray = set(process_symptoms(original_msg))
         global ageAsking
         ageAsking = True
 
@@ -100,7 +103,7 @@ def get_response(user_input):
         decision_tree = db_fxn.createDecisionTree(symptomsArray, int(age))
         tree_xml = decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2], class_names=decision_tree[0].classes_)
         tree_xml.write('decision_tree2.xml')
-        print("Bot: We are going to ask you questions, answer accordingly")
+        print("Bot: We are going to ask you questions, answer accordingly..")
         # processing decision tree
         findDisorder(tree_xml.getroot())
 
@@ -136,7 +139,7 @@ print()
 while True:
     you = input('You: ')
     if(you == "exit"):
-        print(chat)
+        # print(chat)
         break
     
     if(ageAsking):
