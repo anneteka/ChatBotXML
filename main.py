@@ -4,6 +4,7 @@ import db as db_fxn
 # import Response
 import util
 from decision_tree_processing import *
+from process_message import process_answer
 
 ageAsking = False
 
@@ -80,9 +81,11 @@ def findDisorder(root):
         print("Bot: " + questions[str(child.get("feature"))])
         answer = input("You: ")
         # check if the answer is yes/no
+        answer = process_answer(answer)
         while(answer != "yes" and answer != "no"):
-            print("Bot: Please type a valid answer: yes or no!")
+            print("Bot: Please type a valid answer!")
             answer = input("You: ")
+            answer = process_answer(answer)
         if(answer == child.get("answer")):
             # firstly check if this node had the 
             # start checking inside the nested node
@@ -97,7 +100,7 @@ def get_response(user_input):
         decision_tree = db_fxn.createDecisionTree(symptomsArray, int(age))
         tree_xml = decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2], class_names=decision_tree[0].classes_)
         tree_xml.write('decision_tree2.xml')
-        print("Bot: We are going to ask you questions, answer with yes or no")
+        print("Bot: We are going to ask you questions, answer accordingly")
         # processing decision tree
         findDisorder(tree_xml.getroot())
 

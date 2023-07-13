@@ -1,5 +1,7 @@
 <Answers>
     <Answer answer="yes">
+        <KeyWords text="ja"/>
+        <KeyWords text="yes"/>
         <KeyWords text="yep"/>
         <KeyWords text="yeah"/>
         <KeyWords text="definitely"/>
@@ -12,6 +14,8 @@
         <KeyWords text="i think so"/>
     </Answer>
     <Answer answer="no">
+        <KeyWords text="no"/>
+        <KeyWords text="nein"/>
         <KeyWords text="nope"/>
         <KeyWords text="never"/>
         <KeyWords text="almost never"/>
