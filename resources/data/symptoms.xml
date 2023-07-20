@@ -140,7 +140,7 @@
         <KeyWords text="concentration"/>
         <KeyWords text="concentrated"/>
     </Symptom>
-    <Symptom name="blamming_yourself">
+    <Symptom name="blaming_yourself">
         <Question text="Have you been blaming yourself lately?"/>
         <KeyWords text="blaming myself"/>
     </Symptom>

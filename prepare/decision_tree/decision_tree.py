@@ -4,14 +4,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import mysql.connector
 import xml.etree.ElementTree as ET
-from decision_tree_processing import *
+from prepare.decision_tree import decision_tree_processing
 
 user = 'root'
 password = 'root'
 schema = 'chatbot'
 
 
-def get_decision_tree(dataset_name):
+def get_decision_tree(symptoms=None):
+    if symptoms is None:
+        symptoms = []
     conn = mysql.connector.connect(
         host='127.0.0.1',
         user=user,
@@ -19,40 +21,34 @@ def get_decision_tree(dataset_name):
         database=schema
     )
 
-    query = "SELECT * FROM " + dataset_name + ";"
-    # query = "select * from chatbot_mental_issues where feeling_nervous = 1  and trouble_concentrating = 1 and anger = 1 and age > 21 and age < 31 order by Disorder;"
+    query = "SELECT * FROM dataset_small"
+    if symptoms:
+        query = query + " WHERE "
+        for i in range(len(symptoms) - 1):
+            query = query + symptoms[i] + " = 1 and "
+        query = query + symptoms[len(symptoms) - 1] + " = 1"
+
     dataset = pd.read_sql(query, conn)
 
     conn.close()
 
-    # Separate features (symptoms and age) and the target variable (disease)
-    X = dataset.iloc[:, 1:-1]  # Features (symptoms and age)
-    y = dataset['Disorder']  # Target variable
+    X = dataset.iloc[:, 1:-1]
+    y = dataset['Disorder']
 
-    # Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    print(X_test)
-    # decision_tree = DecisionTreeClassifier(max_depth=20, splitter='random', min_samples_split=10)
+    # print(X_test)
     decision_tree = DecisionTreeClassifier()
-
-    # Train the decision tree model
     decision_tree.fit(X_train, y_train)
-
-    # Make predictions on the testing set
     y_pred = decision_tree.predict(X_test)
-
-    # Calculate the accuracy of the model
     accuracy = accuracy_score(y_test, y_pred)
-    print('Accuracy:', accuracy)
-
+    # print('Accuracy:', accuracy)
     tree_text = export_text(decision_tree, feature_names=list(X.columns))
     return decision_tree, tree_text, list(X.columns)
 
 
-decision_tree = get_decision_tree("dataset_small")
-
-
-tree_xml = decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2], class_names=decision_tree[0].classes_)
-
-tree_xml.write('decision_tree.xml')
+def get_decision_tree_text(symptoms):
+    decision_tree = get_decision_tree(symptoms)
+    tree_xml = decision_tree_processing.decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2],
+                                    class_names=decision_tree[0].classes_)
+    return tree_xml

@@ -76,71 +76,12 @@ def generate_diagnose(name):  # change diagnose to name
     return message
 
 
-
-    """
-    if name == 'eating disorder':
-        return f"You could have an {name}."
-    if name == 'PDD':
-        return f"You could have {name} (an pervasive developmental disorder)."
-    if name == 'psychotic deprission':
-        return f"You could have a {name}."
-    if name == 'ADHD':
-        return f"You could have {name} (attention deficit hyperactivity disorder)."
-    if name == 'PTSD':
-        return f"You could have {name} (post-traumatic stress disorder)."
-    if name == 'anexiety':
-        return f"You could have {name}."
-    if name == 'MDD':
-        return f"You could have a {name} (major depressive disorder)."
-    if name == 'sleeping disorder':
-        return f"You could have a {name}."
-    if name == 'bipolar':
-        return f"You could be {name}."
-    if name == 'OCD':
-        return f"You could have {name} (obsessive-compulsive disorder)."
-    if name == 'Loneliness':
-        return f"You could be suffering off of {name}."
-    if name == 'ASD':
-        return f"You could be suffering off of {name} (autism spectrum disorder).
-        
-    """
-
-
 # need to adapt the grammar of the question to each feature
 def question(feature):
     # xpath to find attribute: "//*[@name={feature}]/child::Question/@text"
     # xpath to extract value of attribute:
     xpath = f'string(//*[@name={feature}]/Question/@text)'
     return symptoms.xpath(xpath)
-    """
-    if feature == 'having_trouble_in_sleeping':
-        return "Do you have trouble in sleeping?"
-    if feature == 'hopelessness':
-        return "Do you feel hopelessness?"
-    if feature == 'feeling_tired':
-        return "Do you feel tired?"
-    if feature == 'social_media_addiction':
-        return "Do you have a social media addiction?"
-    if feature == 'avoids_people_or_activities':
-        return "Do you avoid people or activities?"
-    if feature == 'close_friend':
-        return "Do you have close friend's?"
-    if feature == 'blamming_yourself':
-        return "Are you blamming yourself?"
-    if feature == 'introvert':
-        return "Are you an introvert?"
-    if feature == 'breathing_rapidly':
-        return "Do you breath rapidly?"
-    if feature == 'increased_energy':
-        return "Do you feel increased energy?"
-    if feature == 'feeling_negative':
-        return "Do you have the symptom of often feeling negative?"
-    if feature == 'popping_up_stressful_memory':
-        return "Do you get popping up stressful memory?"
-    if feature == 'having_nightmares':
-        return "Do you have nightmares?
-    
-    """
 
 
 
