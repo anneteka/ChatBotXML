@@ -2,8 +2,8 @@ import re
 from prepare import long_responses as long, util
 from access.telegram import db as db_fxn
 # import Response
-from prepare.decision_tree_processing import *
-from prepare.process_xml import process_answer
+from prepare.decision_tree.decision_tree_processing import *
+from prepare.xml_processing.process_xml import process_answer
 
 ageAsking = False
 
