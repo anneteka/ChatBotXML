@@ -1,6 +1,7 @@
 from lxml import etree as ET
 tree = ET.parse('decision_tree.xml')
-
+symptoms = ET.parse('resources/symptoms.xml')
+diagnoses = ET.parse('resource/diagnoses.xml')
 def generate_question(node_id: str, answer=None):
     """
     This function, returns corresponding question or diagnose for a Node
@@ -15,10 +16,8 @@ def generate_question(node_id: str, answer=None):
     # if we do not have an answer given we "just" need to return the question to the feature of node_id given.
 
     if answer is not None:
-        answer_node = tree.xpath(f"//*[@id={node_id}]/@answer")[0]
-        print(answer_node)
-
-        if answer_node == answer:
+        if answer == tree.xpath(f"//*[@id={node_id}]/@answer")[0]:
+            #answer == node_answer
             child_nodes = tree.xpath(f"//*[@id={node_id}]/*/@id")
             print(child_nodes)
             return get_question_or_diagnose(child_nodes)
@@ -32,12 +31,14 @@ def generate_question(node_id: str, answer=None):
             return get_question_or_diagnose(sibling_childs)
     else:
         # get feature or name of current id:
-        feature = tree.xpath(f"//*[@id={node_id}]/@feature")
-        if len(feature) != 0:
+        if len(tree.xpath(f"//*[@id={node_id}]/@feature")) != 0:
+            feature = tree.xpath(f"//*[@id={node_id}]/@feature")
             return question(feature[0])
         else:
             name = tree.xpath(f"//*[@id={node_id}]/@name")
             return generate_diagnose(name[0])
+
+    #add exception, if id tag is Disorder we cannot take a answer argument
 
 
 def get_sibling_id(parent, node_id):
@@ -61,6 +62,22 @@ def get_question_or_diagnose(list):
 # node_id to identify the node in where the diagnose lies in
 def generate_diagnose(name):  # change diagnose to name
 
+    xpath = f"string(//*[@name={name}]/Message/@diagnose)"
+    xpath_1 = f"string(//*[@name={name}]/Message/@text)"
+    xpath_2 =f"string(//*[@name={name}]/Message/@description)"
+    xpath_3 = f"string(//*[@name={name}]/Message/@url)"
+
+    diagnose = diagnoses.xpath(xpath)
+    text = diagnoses.xpath(xpath_1)
+    description = diagnoses.xpath(xpath_2)
+    url = diagnoses.xpath(xpath_3)
+
+    message = diagnose+"\n"+text+"\n"+description+"\n"+url
+    return message
+
+
+
+    """
     if name == 'eating disorder':
         return f"You could have an {name}."
     if name == 'PDD':
@@ -84,10 +101,18 @@ def generate_diagnose(name):  # change diagnose to name
     if name == 'Loneliness':
         return f"You could be suffering off of {name}."
     if name == 'ASD':
-        return f"You could be suffering off of {name} (autism spectrum disorder)."
+        return f"You could be suffering off of {name} (autism spectrum disorder).
+        
+    """
+
 
 # need to adapt the grammar of the question to each feature
 def question(feature):
+    # xpath to find attribute: "//*[@name={feature}]/child::Question/@text"
+    # xpath to extract value of attribute:
+    xpath = f'string(//*[@name={feature}]/Question/@text)'
+    return symptoms.xpath(xpath)
+    """
     if feature == 'having_trouble_in_sleeping':
         return "Do you have trouble in sleeping?"
     if feature == 'hopelessness':
@@ -113,7 +138,10 @@ def question(feature):
     if feature == 'popping_up_stressful_memory':
         return "Do you get popping up stressful memory?"
     if feature == 'having_nightmares':
-        return "Do you have nightmares?"
+        return "Do you have nightmares?
+    
+    """
+
 
 
 def all_features():
@@ -123,6 +151,9 @@ def all_features():
 def all_diagnoses():
     diagnoses = tree.xpath(f"//@name")
     return set(diagnoses)
+
+if __name__ == '__main__':
+    question("breathing_rapidly")
 
 
 
