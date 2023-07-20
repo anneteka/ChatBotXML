@@ -1,7 +1,7 @@
 from lxml import etree as ET
 tree = ET.parse('decision_tree.xml')
 symptoms = ET.parse('resources/symptoms.xml')
-diagnoses = ET.parse('resource/diagnoses.xml')
+disorders = ET.parse('resource/disorders.xml')
 def generate_question(node_id: str, answer=None):
     """
     This function, returns corresponding question or diagnose for a Node
@@ -67,10 +67,10 @@ def generate_diagnose(name):  # change diagnose to name
     xpath_2 =f"string(//*[@name={name}]/Message/@description)"
     xpath_3 = f"string(//*[@name={name}]/Message/@url)"
 
-    diagnose = diagnoses.xpath(xpath)
-    text = diagnoses.xpath(xpath_1)
-    description = diagnoses.xpath(xpath_2)
-    url = diagnoses.xpath(xpath_3)
+    diagnose = disorders.xpath(xpath)
+    text = disorders.xpath(xpath_1)
+    description = disorders.xpath(xpath_2)
+    url = disorders.xpath(xpath_3)
 
     message = diagnose+"\n"+text+"\n"+description+"\n"+url
     return message
