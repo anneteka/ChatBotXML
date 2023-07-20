@@ -35,9 +35,9 @@ def setup_database(from_file):
 
     data.columns = data.columns.str.replace('.', '_')
     data.columns = data.columns.str.replace("blamming_yourself", "blaming_yourself")
-    data = data.replace({'yes': 1, 'no': 0})
-    data.replace({"anexiety": "anxiety", "bipolar": "bipolar disorder", "psychotic deprission": "psychotic depression",
-                  "Loneliness": "loneliness"})
+    data = data.replace({'yes': 1, 'no': 0, "anexiety": "anxiety", "bipolar": "bipolar disorder",
+                         "psychotic deprission": "psychotic depression",
+                         "Loneliness": "loneliness"})
     data_types = {
         column: 'INT' if column != 'Disorder' else 'VARCHAR(255)'
         for column in data.columns

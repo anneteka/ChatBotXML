@@ -11,9 +11,7 @@ def process_general_message(user_id, message_text):
     elif node == -1:
         # testing was started and this message text contains symptoms
         symptoms = process_xml.process_symptoms(message_text)
-        print(symptoms)
         decision_tree = dt.get_decision_tree_text(symptoms)
-        print(decision_tree)
         telegram_database.update_user(user_id, 0, decision_tree)
         child_type, child_node, child_id = process_xml.process_current_node(decision_tree, 0)
         question = process_xml.get_question(child_node)
@@ -22,27 +20,23 @@ def process_general_message(user_id, message_text):
         if node != 0:
             current_type, current_name = process_xml.node_id_data(xml, node)
             if current_type == "Disorder":
-                print(current_name)
-                return current_name  # process disorder message + start testing again
+                return get_disorder_message(current_name)  # process disorder message + start testing again
 
         answer = process_xml.process_answer(message_text)
         if answer is None:
             return "I don't understand. Please answer the question again"
         new_node_id = process_xml.get_next_node(xml, node, answer)
-        print(new_node_id)
         child_type, child_name, child_id = process_xml.process_current_node(xml, new_node_id)
-        print(child_name)
         if child_type == "Symptom":
             telegram_database.update_user(user_id, current_node=new_node_id)
             return process_xml.get_question(child_name)
         else:
             telegram_database.update_user(user_id, current_node=child_id)
-            return child_name
-            return
+            return get_disorder_message(child_name)
 
 
 def get_disorder_message(disorder):
-    return "disorder res"
+    return "You have " + disorder + " 100%. Use /testing command to start again"
 
 
 def setup_user(user_id):

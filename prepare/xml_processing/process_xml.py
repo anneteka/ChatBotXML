@@ -16,7 +16,6 @@ def process_symptoms(text):
     tree = ET.parse('../../resources/data/symptoms.xml')
     text = str(text).lower().replace(" and ", ",")
     texts = text.split(",")
-    print(texts)
     res = []
     for symptom in texts:
         symptom = symptom.strip().lower()

@@ -38,7 +38,7 @@ def get_decision_tree(symptoms=None):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # print(X_test)
-    decision_tree = DecisionTreeClassifier()
+    decision_tree = DecisionTreeClassifier(splitter="random", max_features="log2", min_samples_leaf=1)
     decision_tree.fit(X_train, y_train)
     y_pred = decision_tree.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
@@ -47,7 +47,7 @@ def get_decision_tree(symptoms=None):
     return decision_tree, tree_text, list(X.columns)
 
 
-def get_decision_tree_text(symptoms):
+def get_decision_tree_text(symptoms=None):
     decision_tree = get_decision_tree(symptoms)
     tree_xml = decision_tree_processing.decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2],
                                     class_names=decision_tree[0].classes_)

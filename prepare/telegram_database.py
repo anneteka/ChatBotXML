@@ -56,7 +56,6 @@ def update_user(user_id, current_node=-2, xml=""):
         return
 
     update_user_query = f"UPDATE telegram_data SET {set_text}  WHERE user_id = {user_id}"
-    print(update_user_query)
     db_cursor.execute(update_user_query)
 
     db_connection.commit()

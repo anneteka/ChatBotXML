@@ -134,7 +134,7 @@
         <KeyWords text="crying"/>
         <KeyWords text="cry"/>
     </Symptom>
-    <Symptom name="trouble_concentrating">
+    <Symptom name="trouble_in_concentration">
         <Question text="Have you been having trouble concentrating?"/>
         <KeyWords text="concentrating"/>
         <KeyWords text="concentration"/>
