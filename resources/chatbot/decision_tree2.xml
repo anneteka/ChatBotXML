@@ -4,7 +4,7 @@
 	</Symptom>
 	<Symptom feature="having_trouble_in_sleeping" answer="yes">
 		<Symptom feature="introvert" answer="no">
-			<Symptom feature="blamming_yourself" answer="no">
+			<Symptom feature="blaming_yourself" answer="no">
 				<Disorder name="MDD" />
 			</Symptom>
 			<Symptom feature="blamming_yourself" answer="yes">

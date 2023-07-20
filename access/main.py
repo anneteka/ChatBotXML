@@ -1,11 +1,9 @@
 import re
-import long_responses as long
-import db as db_fxn
+from prepare import long_responses as long, util
+from access.telegram import db as db_fxn
 # import Response
-import util
-from decision_tree_processing import *
-from process_message import process_answer
-from process_message import process_symptoms
+from prepare.decision_tree_processing import *
+from prepare.process_xml import process_answer
 
 ageAsking = False
 

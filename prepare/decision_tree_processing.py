@@ -44,7 +44,7 @@ def process_line(lines, parent_element, current_level, last_nodes, id_counter):
                 node.set('name', class_name)
 
             else:
-                node.set('feature', get_node_feature(line))
+                node.set('name', get_node_feature(line))
                 node.set('answer', get_node_threshold(line))
 
                 last_nodes[line_level] = node

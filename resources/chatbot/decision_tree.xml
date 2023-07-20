@@ -1,0 +1,69 @@
+<DecisionTree id="0"
+              classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anexiety,bipolar,eating disorder,psychotic deprission,sleeping disorder">
+    <Symptom id="1" name="introvert" answer="no">
+        <Symptom id="2" name="hopelessness" answer="no">
+            <Symptom id="3" name="feeling_negative" answer="no">
+                <Symptom id="4" name="close_friend" answer="no">
+                    <Disorder id="5" name="ADHD"/>
+                </Symptom>
+                <Symptom id="6" name="close_friend" answer="yes">
+                    <Symptom id="7" name="having_nightmares" answer="no">
+                        <Symptom id="8" name="breathing_rapidly" answer="no">
+                            <Symptom id="9" name="feeling_tired" answer="no">
+                                <Disorder id="10" name="bipolar"/>
+                            </Symptom>
+                            <Symptom id="11" name="feeling_tired" answer="yes">
+                                <Symptom id="12" name="repetitive_behaviour" answer="no">
+                                    <Disorder id="13" name="sleeping disorder"/>
+                                </Symptom>
+                                <Symptom id="14" name="repetitive_behaviour" answer="yes">
+                                    <Disorder id="15" name="OCD"/>
+                                </Symptom>
+                            </Symptom>
+                        </Symptom>
+                        <Symptom id="16" name="breathing_rapidly" answer="yes">
+                            <Disorder id="17" name="anexiety"/>
+                        </Symptom>
+                    </Symptom>
+                    <Symptom id="18" name="having_nightmares" answer="yes">
+                        <Disorder id="19" name="PTSD"/>
+                    </Symptom>
+                </Symptom>
+            </Symptom>
+            <Symptom id="20" name="feeling_negative" answer="yes">
+                <Symptom id="21" name="anger" answer="no">
+                    <Disorder id="22" name="eating disorder"/>
+                </Symptom>
+                <Symptom id="23" name="anger" answer="yes">
+                    <Disorder id="24" name="MDD"/>
+                </Symptom>
+            </Symptom>
+        </Symptom>
+        <Symptom id="25" name="hopelessness" answer="yes">
+            <Symptom id="26" name="having_trouble_in_sleeping" answer="no">
+                <Disorder id="27" name="PDD"/>
+            </Symptom>
+            <Symptom id="28" name="having_trouble_in_sleeping" answer="yes">
+                <Symptom id="29" name="blamming_yourself" answer="no">
+                    <Disorder id="30" name="MDD"/>
+                </Symptom>
+                <Symptom id="31" name="blamming_yourself" answer="yes">
+                    <Disorder id="32" name="MDD"/>
+                </Symptom>
+            </Symptom>
+        </Symptom>
+    </Symptom>
+    <Symptom id="33" name="introvert" answer="yes">
+        <Symptom id="34" name="avoids_people_or_activities" answer="no">
+            <Disorder id="35" name="Loneliness"/>
+        </Symptom>
+        <Symptom id="36" name="avoids_people_or_activities" answer="yes">
+            <Symptom id="37" name="suicidal_thought" answer="no">
+                <Disorder id="38" name="ASD"/>
+            </Symptom>
+            <Symptom id="39" name="suicidal_thought" answer="yes">
+                <Disorder id="40" name="psychotic deprission"/>
+            </Symptom>
+        </Symptom>
+    </Symptom>
+</DecisionTree>
