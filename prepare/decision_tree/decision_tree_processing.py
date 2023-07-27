@@ -21,7 +21,6 @@ def decision_tree_to_xml(decision_tree, feature_names, class_names):
     root.set('id', '0')
 
     root.set('classNames', ','.join(class_names))
-    tree.write("test.xml")
 
     return ET.tostring(tree.getroot()).decode()
 

@@ -1,0 +1,40 @@
+|--- introvert <= 0.50
+|   |--- hopelessness <= 0.50
+|   |   |--- feeling_negative <= 0.50
+|   |   |   |--- close_friend <= 0.50
+|   |   |   |   |--- class: ADHD
+|   |   |   |--- close_friend >  0.50
+|   |   |   |   |--- having_nightmares <= 0.50
+|   |   |   |   |   |--- breathing_rapidly <= 0.50
+|   |   |   |   |   |   |--- popping_up_stressful_memory <= 0.50
+|   |   |   |   |   |   |   |--- class: bipolar
+|   |   |   |   |   |   |--- popping_up_stressful_memory >  0.50
+|   |   |   |   |   |   |   |--- feeling_nervous <= 0.50
+|   |   |   |   |   |   |   |   |--- class: sleeping disorder
+|   |   |   |   |   |   |   |--- feeling_nervous >  0.50
+|   |   |   |   |   |   |   |   |--- class: OCD
+|   |   |   |   |   |--- breathing_rapidly >  0.50
+|   |   |   |   |   |   |--- class: anexiety
+|   |   |   |   |--- having_nightmares >  0.50
+|   |   |   |   |   |--- class: PTSD
+|   |   |--- feeling_negative >  0.50
+|   |   |   |--- having_nightmares <= 0.50
+|   |   |   |   |--- class: eating disorder
+|   |   |   |--- having_nightmares >  0.50
+|   |   |   |   |--- class: MDD
+|   |--- hopelessness >  0.50
+|   |   |--- having_trouble_in_sleeping <= 0.50
+|   |   |   |--- class: PDD
+|   |   |--- having_trouble_in_sleeping >  0.50
+|   |   |   |--- blamming_yourself <= 0.50
+|   |   |   |   |--- class: MDD
+|   |   |   |--- blamming_yourself >  0.50
+|   |   |   |   |--- class: MDD
+|--- introvert >  0.50
+|   |--- avoids_people_or_activities <= 0.50
+|   |   |--- class: Loneliness
+|   |--- avoids_people_or_activities >  0.50
+|   |   |--- feeling_negative <= 0.50
+|   |   |   |--- class: ASD
+|   |   |--- feeling_negative >  0.50
+|   |   |   |--- class: psychotic deprission

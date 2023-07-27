@@ -1,5 +1,5 @@
 from lxml import etree as ET
-tree = ET.parse('decision_tree.xml')
+tree = ET.parse('decision_tree_example.xml')
 symptoms = ET.parse('resources/symptoms.xml')
 def generate_question(node_id: str, answer=None):
     """
