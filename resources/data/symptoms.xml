@@ -1,3 +1,4 @@
+<!--manually written file to store alternative symptom names/keywords and corresponding custom questions-->
 <Sypmtoms>
     <Symptom name="feeling_nervous">
         <Question text="Have you been feeling nervous?"/>

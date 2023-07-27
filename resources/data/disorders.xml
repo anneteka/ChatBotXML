@@ -1,3 +1,4 @@
+<!--manually written file to store result message data-->
 <Disorders>
     <Disorder name="ADHD">
         <Message

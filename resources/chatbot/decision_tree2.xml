@@ -1,3 +1,4 @@
+<!--another example of a generated decision tree file, also used for code testing-->
 <DecisionTree classNames="MDD,PDD,psychotic deprission">
 	<Symptom feature="having_trouble_in_sleeping" answer="no">
 		<Disorder name="PDD" />

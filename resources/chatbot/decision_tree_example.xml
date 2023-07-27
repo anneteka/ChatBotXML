@@ -1,3 +1,4 @@
+<!--example of a decision tree generated file, also used for code testing-->
 <DecisionTree id="0"
               classNames="ADHD,ASD,Loneliness,MDD,OCD,PDD,PTSD,anexiety,bipolar,eating disorder,psychotic deprission,sleeping disorder">
     <Symptom id="1" name="introvert" answer="no">
