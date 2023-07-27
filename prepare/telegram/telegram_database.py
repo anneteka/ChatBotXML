@@ -9,6 +9,7 @@ user = 'root'
 password = 'root'
 schema = 'chatbot'
 
+# service file for working with the database table storing user data
 
 # creates table for the telegram bot usage containing user data
 def create_table():

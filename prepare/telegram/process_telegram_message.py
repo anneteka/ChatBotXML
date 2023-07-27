@@ -2,6 +2,7 @@ from prepare.telegram import telegram_database
 from prepare.xml_processing import process_xml
 from prepare.decision_tree import decision_tree as dt
 
+# service file for working with the incoming user messages, additional logic layer between the ui logic and the database logic
 
 # incoming messages processing logic is stored here
 def process_general_message(user_id, message_text):
