@@ -1,51 +1,73 @@
 <Disorders>
     <Disorder name="ADHD">
-        <Message diagnose = "Based on our Database you may have ADHD (attention deficit hyperactivity disorder)." text="You're not alone and there's nothing wrong with you."/>
-        <Link url="https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/anxiety" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may have ADHD (attention deficit hyperactivity disorder). \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/anxiety"
+              description="You're not alone and there's nothing wrong with you."/>
     </Disorder>
     <Disorder name="ASD">
-        <Message diagnose = "Based on our Database you may have ASD (autism spectrum disorder)." text="Autism is Not a Disability It's a Different Ability."/>
-        <Link url="https://www.cdc.gov/ncbddd/autism/facts.html" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may have ASD (autism spectrum disorder). \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.cdc.gov/ncbddd/autism/facts.html"
+              description="Autism is Not a Disability It's a Different Ability."/>
     </Disorder>
     <Disorder name="loneliness">
-        <Message diagnose = "Based on our Database you may suffer from loneliness." text="Try and open up to people you know and look after yourself."/>
-        <Link url="https://www.verywellmind.com/loneliness-causes-effects-and-treatments-2795749" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may suffer from loneliness. \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.verywellmind.com/loneliness-causes-effects-and-treatments-2795749"
+              description="Try and open up to people you know and look after yourself."/>
     </Disorder>
     <Disorder name="MDD">
-        <Message diagnose = "Based on our Database you may have MDD (major depressive disorder)." text="Simplify your life and learn ways to relax and manage your stress."/>
-        <Link url="https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may have MDD (major depressive disorder). \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007"
+              description="Simplify your life and learn ways to relax and manage your stress."/>
     </Disorder>
     <Disorder name="OCD">
-        <Message diagnose = "Based on our Database you may have OCD (obsessive-compulsive disorder)."  text="Don’t waste time trying to prevent or not think your thoughts."/>
-        <Link url="https://www.mayoclinic.org/diseases-conditions/obsessive-compulsive-disorder/symptoms-causes/syc-20354432" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may have OCD (obsessive-compulsive disorder). \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.mayoclinic.org/diseases-conditions/obsessive-compulsive-disorder/symptoms-causes/syc-20354432"
+              description="Don’t waste time trying to prevent or not think your thoughts."/>
     </Disorder>
     <Disorder name="PDD">
-        <Message diagnose = "Based on our Database you may have an PDD (pervasive developmental disorder). " text="Focus on your goals and simplify your life."/>
-        <Link url="https://www.autismspeaks.org/pervasive-developmental-disorder-pdd-nos" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may have an PDD (pervasive developmental disorder). \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.autismspeaks.org/pervasive-developmental-disorder-pdd-nos"
+              description="Focus on your goals and simplify your life."/>
     </Disorder>
     <Disorder name="PTSD">
-        <Message diagnose = "Based on our Database you may have an PTSD (post-traumatic stress disorder). " text="Practice Mindfulness Meditation and Yoga."/>
-        <Link url="https://www.psychiatry.org/patients-families/ptsd/what-is-ptsd" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may have an PTSD (post-traumatic stress disorder). \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.psychiatry.org/patients-families/ptsd/what-is-ptsd"
+              description="Practice Mindfulness Meditation and Yoga."/>
     </Disorder>
     <Disorder name="anxiety">
-        <Message diagnose = "Based on our Database you may suffer from anxiety." text="Talk to someone you trust add. Talking to someone you trust about what's making you anxious could be a relief."/>
-        <Link url="https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/anxiety" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may suffer from anxiety. \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/anxiety"
+              description="Talk to someone you trust add. Talking to someone you trust about what's making you anxious could be a relief."/>
     </Disorder>
     <Disorder name="bipolar disorder">
-        <Message diagnose = "Based on our Database you may suffer from a bipolar disorder." text="Monitor your symptoms and moods."/>
-        <Link url="https://www.samhsa.gov/mental-health/bipolar" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may suffer from a bipolar disorder. \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.samhsa.gov/mental-health/bipolar" description="Monitor your symptoms and moods."/>
     </Disorder>
     <Disorder name="eating disorder">
-        <Message diagnose = "Based on our Database you may suffer from an eating disorder." text="Connect with your body in joyful, purposeful way"/>
-        <Link url="https://www.healthline.com/nutrition/common-eating-disorders" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may suffer from an eating disorder. \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.healthline.com/nutrition/common-eating-disorders"
+              description="Connect with your body in joyful, purposeful way"/>
     </Disorder>
     <Disorder name="psychotic depression">
-        <Message diagnose = "Based on our Database you may suffer from a psychotic depression." text="Look after yourself and get medical help"/>
-        <Link url="https://www.nhs.uk/mental-health/conditions/psychotic-depression/" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may suffer from a psychotic depression. \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://www.nhs.uk/mental-health/conditions/psychotic-depression/"
+              description="Look after yourself and get medical help"/>
     </Disorder>
     <Disorder name="sleeping disorder">
-        <Message diagnose = "Based on our Database you may suffer from a sleeping disorder." text="Use the bed for sleeping or relaxing only."/>
-        <Link url="https://nami.org/About-Mental-Illness/Common-with-Mental-Illness/Sleep-Disorders" description="You may find more Information and help if you click on the link: "/>
+        <Message
+                text="Based on our Database you may suffer from a sleeping disorder. \nYou may find more Information and help if you click on the link: "/>
+        <Link url="https://nami.org/About-Mental-Illness/Common-with-Mental-Illness/Sleep-Disorders"
+              description="Use the bed for sleeping or relaxing only."/>
     </Disorder>
-
 </Disorders>
