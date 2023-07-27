@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 
 def decision_tree_to_xml(decision_tree, feature_names, class_names):
+    # converts the tree to a text representation, see /resources/chatbot/decision_tree_example
     tree_text = export_text(decision_tree, feature_names=feature_names)
 
     lines = tree_text.split('\n')
@@ -25,12 +26,12 @@ def decision_tree_to_xml(decision_tree, feature_names, class_names):
     return ET.tostring(tree.getroot()).decode()
 
 
-
+# recursive algorithm for processing the plain text decision tree into a xml based tree
+# based on counting the levels of the tree and keeping track of current and parent nodes
 def process_line(lines, parent_element, current_level, last_nodes, id_counter):
     while lines:
         line = lines[0]
         line_level = get_indentation_level(line)
-        # print(str(line_level) + " " + str(current_level) + " " + line)
 
         if line_level >= current_level:
             lines.pop(0)
@@ -61,19 +62,23 @@ def process_line(lines, parent_element, current_level, last_nodes, id_counter):
     return lines
 
 
+# returns tree node depth
 def get_indentation_level(line):
     return line.count('|')
 
 
+# returns class (disorder) name if present in a string
 def get_node_class_name(line):
     class_name = line.split('class: ')[1].strip()
     return class_name
 
 
+# returns feature (symptom) name if present in a string
 def get_node_feature(line):
     return line.split('|--- ')[1].split(' ')[0]
 
 
+# returns a decision corresponding to the node
 def get_node_threshold(line):
     if "<" in line:
         return "no"
@@ -81,8 +86,3 @@ def get_node_threshold(line):
         return "yes"
     else:
         return "class"
-
-
-def get_node_class_name(line):
-    class_name = line.split('class: ')[1].strip()
-    return class_name
