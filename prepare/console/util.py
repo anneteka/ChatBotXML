@@ -1,6 +1,6 @@
-from prepare.Response import Response
+from prepare.console.Response import Response
 import xml.etree.ElementTree as ET
-from prepare.Response import DisorderAnswer
+from prepare.console.Response import DisorderAnswer
 
 
 # this function creates a dictionary where the key is the bot response and the value is the Response class
@@ -55,7 +55,7 @@ def initializeSymptomsQuestions():
 
 # this is going to return a dictionary, for each disorder there will be DisorderAnswer
 def initializeDisorderAnswers():
-    tree = ET.parse('../resources/data/disorders.xml')
+    tree = ET.parse('../../resources/data/disorders.xml')
     disorders = tree.getroot()
     disorderAnswers = {}
     # iterate the children of Disorders tag

@@ -12,6 +12,13 @@ def process_answer(text):
     return res
 
 
+def generate_diagnose_message(diagnose):
+    tree = ET.parse('../../resources/data/disorders.xml')
+    text = tree.xpath(f"//*[@name='{diagnose}']/Message/@text")[0]
+    link = tree.xpath(f"//*[@name='{diagnose}']/Link/@url")[0]
+    return text+link+"\nUse /testing command to start the test again"
+
+
 def process_symptoms(text):
     tree = ET.parse('../../resources/data/symptoms.xml')
     text = str(text).lower().replace(" and ", ",")
@@ -59,4 +66,3 @@ def get_next_node(xml_text, node_id, answer):
 # print(process_symptoms("tired and sad,"))
 # print(get_question("hallucinations"))
 # print(findTextForSymptoms(""))
-

@@ -1,5 +1,5 @@
 import telebot
-from prepare import process_telegram_message
+from prepare.telegram import process_telegram_message
 
 # t.me/XMLchat_bot
 BOT_TOKEN = '6249367774:AAFOlNFVbE71oxVEnN-sE7B5b0V9zLAOj4Y'

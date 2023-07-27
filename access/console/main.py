@@ -1,6 +1,6 @@
 import re
-from prepare import long_responses as long, util
-from access import db as db_fxn
+from prepare.console import long_responses as long, util
+from access.console import db as db_fxn
 # import Response
 from prepare.decision_tree.decision_tree_processing import *
 from prepare.xml_processing.process_xml import process_answer

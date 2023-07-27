@@ -1,4 +1,4 @@
-from prepare import telegram_database
+from prepare.telegram import telegram_database
 from prepare.xml_processing import process_xml
 from prepare.decision_tree import decision_tree as dt
 
@@ -36,7 +36,7 @@ def process_general_message(user_id, message_text):
 
 
 def get_disorder_message(disorder):
-    return "You have " + disorder + " 100%. Use /testing command to start again"
+    return process_xml.generate_diagnose_message(disorder)
 
 
 def setup_user(user_id):
