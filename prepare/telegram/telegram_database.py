@@ -4,16 +4,26 @@ import pandas as pd
 import mysql.connector
 import openpyxl
 
+# database credentials
 user = 'root'
 password = 'root'
 schema = 'chatbot'
 
 
+# creates table for the telegram bot usage containing user data
 def create_table():
     db_connection = mysql.connector.connect(user=user, password=password,
                                             host='127.0.0.1',
                                             database=schema)
     db_cursor = db_connection.cursor()
+    # user_id is actually a telegram chat id, unique to each chat between a user and a bot, used as a primary key since
+    # it is not possible to have to chats with the same user
+
+    # current node holds info on which node of the decision tree the user currently is and also for the logic to determine the testing stage
+    # -2 = the testing has not started, no xml tree yet
+    # -1 = the testing has started and the user is supposed to list the symptoms they have now
+
+    # xml holds the xml file as a text so we don't have to store actual files in the file system
     create_table_query = f"CREATE TABLE telegram_data (user_id int NOT NULL, current_node int, xml text, PRIMARY KEY (user_id))"
     db_cursor.execute(create_table_query)
 
@@ -22,6 +32,7 @@ def create_table():
     db_connection.close()
 
 
+# service function to create a user
 def create_user(user_id, xml_string):
     db_connection = mysql.connector.connect(user=user, password=password,
                                             host='127.0.0.1',
@@ -37,6 +48,7 @@ def create_user(user_id, xml_string):
         update_user(user_id, -2, xml_string)
 
 
+# service function to update a user by id
 def update_user(user_id, current_node=-2, xml=""):
     db_connection = mysql.connector.connect(user=user, password=password,
                                             host='127.0.0.1',
@@ -62,7 +74,7 @@ def update_user(user_id, current_node=-2, xml=""):
     db_cursor.close()
     db_connection.close()
 
-
+# service function to delete a user by id
 def delete_user(user_id):
     db_connection = mysql.connector.connect(user=user, password=password,
                                             host='127.0.0.1',
@@ -77,7 +89,7 @@ def delete_user(user_id):
     db_cursor.close()
     db_connection.close()
 
-
+# service function to get a user by id
 def get_user(user_id):
     db_connection = mysql.connector.connect(user=user, password=password,
                                             host='127.0.0.1',

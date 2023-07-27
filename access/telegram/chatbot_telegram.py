@@ -15,7 +15,8 @@ bot = telebot.TeleBot(BOT_TOKEN)
 def send_welcome(message):
     bot.reply_to(message, "Disclaimer: this bot is not a valid diagnostic instrument, however, you can use it to "
                           "evaluate your symptom and get useful information. "
-                          "\n To start testing process use /testing command.")
+                          "\nTo start testing process use /testing command."
+                          "\nIf you wish to delete your data simply restart the bot.")
     process_telegram_message.setup_user(message.chat.id)
 
 
