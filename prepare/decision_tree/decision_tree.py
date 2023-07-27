@@ -49,7 +49,7 @@ def get_decision_tree(symptoms=None):
     return decision_tree
 
 
-# retruns the decision tree as an xml string
+# retruns the decision tree as an xml string. see /resources/chatbot/decision_tree_example.xml for an example output
 def get_decision_tree_text(symptoms=None):
     decision_tree = get_decision_tree(symptoms)
     tree_xml = decision_tree_processing.decision_tree_to_xml(decision_tree[0], feature_names=decision_tree[2],
